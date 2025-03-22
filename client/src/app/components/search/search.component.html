@@ -1,0 +1,6 @@
+<div class="form-container container d-flex justify-content-center w-50 my-3">
+
+  <input class="form-control me-2" type="search" placeholder="Search" id="mysearch" [(ngModel)]="searchValue"  (keydown.enter)="goToSearchComponent()">
+  <button class="btn btn-outline-danger" type="submit" (click)="goToSearchComponent()">Search</button>
+
+</div>

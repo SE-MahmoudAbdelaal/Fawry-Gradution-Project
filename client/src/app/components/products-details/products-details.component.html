@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class=" my-5">
+
+
+<div class="row" *ngIf="!loading">
+    <div class="main d-flex justify-item-center w-75 m-auto align-items-center">
+      <div class="col-md-3 col-sm-12 pr-5">
+        <img src="{{productData.image}}" class="img-fluid rounded-top" alt="" />
+      </div>
+      <div class="col-md-9 col-sm-12">
+      <ul class="list-unstyled">
+        <li>Title:{{productData.title}}</li>
+        <li>Description :{{productData.description}}</li>
+        <li>Price :{{productData.price}}</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="text-center">
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+<app-footer></app-footer>

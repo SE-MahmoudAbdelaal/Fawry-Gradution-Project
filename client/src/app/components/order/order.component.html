@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  <h2>Your Orders</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input type="date" class="form-control" [(ngModel)]="startDate" placeholder="Start Date" />
+    </div>
+    <div class="col-md-4">
+      <input type="date" class="form-control" [(ngModel)]="endDate" placeholder="End Date" />
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="searchOrders()">Search Orders</button>
+    </div>
+  </div>
+
+  <div *ngIf="orders.length === 0">
+    <p>No orders found.</p>
+  </div>
+
+  <div *ngIf="orders.length > 0">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Date</th>
+          <th>Total Amount</th>
+          <th>Status</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.createdAt | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ order.total_amount_after_discount }} L.E</td>
+          <td>{{ order.status }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let item of order.items">{{ item.product.name }}</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <p class="text-danger">{{ errorMessage }}</p>
+  </div>
+</div>

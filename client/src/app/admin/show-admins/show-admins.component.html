@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="col-md-3">
+
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+
+    <!-- <app-sidebar></app-sidebar> -->
+<div class="  col-md-9 py-3">
+  <h2 class="text-center m-3">All Admins</h2>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of admins">
+        <td>{{ admin.userId }}</td>
+        <td>{{ admin.firstName }}</td>
+        <td>{{ admin.lastName }}</td>
+        <td>{{ admin.email }}</td>
+        <td>{{ admin.phone }}</td>
+        <td>{{ admin.gender }}</td>
+        <td>{{ admin.role }}</td>
+        <td>{{ admin.createdAt }}</td>
+        <td>{{ admin.updatedAt }}</td>
+        <td>{{ admin.deletedAt }}</td>
+        <td>
+          <button class="btn btn-danger me-2" (click)="deleteAdmin(admin.userId)">Delete</button>
+          <button type="button" class="btn btn-success" (click)="openChangeRoleModal(admin.id)">
+            Change Role
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary py-3 px-4  rounded-3" (click)="movetoCreateAdmin()">Add New Admin </button>
+
+
+
+
+
+  <!-- Button to Open the Modal -->
+
+
+<!-- The Modal -->
+<div class="modal fade" id="addCardModal" tabindex="-1" aria-labelledby="addCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="addCardModalLabel">Change Role of Admin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <form (ngSubmit)="changeRole()">
+          <div class="mb-3">
+            <label for="roleSelect" class="form-label">Select Role</label>
+            <select id="roleSelect" class="form-select" [(ngModel)]="selectedRole" [ngModelOptions]="{standalone: true}">
+              <option value="admin" selected>Admin</option>
+              <option value="user">User</option>
+              <option value="merchant">Merchant</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+  </div>
+
+

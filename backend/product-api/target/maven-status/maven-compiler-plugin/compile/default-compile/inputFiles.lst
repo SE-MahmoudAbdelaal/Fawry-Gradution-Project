@@ -1,0 +1,12 @@
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/Mapper/ProductMapper.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/ProductApiApplication.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/ProductService/ProductService.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/ProductService/ProductServiceImp.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/controller/FileUploadController.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/controller/ProductRestController.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/dto/ProductDto.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/entity/Product.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/exception/ApiException.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/exception/ProductException.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/repository/ProductRepo.java
+/home/shaymaa/Desktop/backend/e-commerce/product-api/src/main/java/com/example/product_api/service/FileUploadService.java

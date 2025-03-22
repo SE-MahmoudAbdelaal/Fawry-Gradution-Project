@@ -1,0 +1,61 @@
+<!-- <app-top-bar></app-top-bar> -->
+<main class="container-fluid">
+  <div class="row flex-nowrap">
+    <div
+      class="col-auto col-md-2 col-xl-1 px-sm-2 px-0 bg-dark d-flex justify-content-center pt-5"
+    >
+      <app-side-bar></app-side-bar>
+    </div>
+
+  <div class="col py-4" >
+      <div class="text-center m-3">
+        <h3>Promo Codes (will be removed from vendor)</h3>
+      </div>
+      <div class="table-responsive col-lg-6 container-fluid p-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Promo Code</th>
+              <th scope="col">Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let promoCode of promoCodes; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ promoCode.code }}</td>
+              <td>{{ promoCode.percentage }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container-fluid col-lg-5 col-md-7 col-sm-9 col-xs-12 mt-5">
+        <form [formGroup]="promoCodeForm" (ngSubmit)="submitPromoCode()">
+          <div class="mb-3">
+            <label for="promoCode" class="form-label">Promo Code</label>
+            <input
+              type="text"
+              class="form-control w-75"
+              id="promoCode"
+              formControlName="promoCode"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="discountAmount" class="form-label"
+              >Discount Amount (%)</label
+            >
+            <input
+              type="number"
+              class="form-control w-75"
+              id="discountAmount"
+              formControlName="discountAmount"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-success">Add Promo Code</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

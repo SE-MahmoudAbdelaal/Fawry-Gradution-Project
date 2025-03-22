@@ -1,27 +1,72 @@
-# Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+# Microservices-Based E-Commerce Platform
 
-## Development server
+A scalable e-commerce platform built using Spring Boot and Angular, leveraging microservices architecture for seamless and efficient service management.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## **Project Overview**
 
-## Code scaffolding
+This project is an e-commerce platform developed using Spring Boot for backend services and Angular for the frontend. It is designed with a microservices architecture, where each service communicates with others using Feign Client and publishes messages through RabbitMQ. The application uses Redis for caching cart data and MySQL as the main database.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Architecture Diagram](Microservices%20Diagram.jpg)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## **Key Features**
 
-## Running unit tests
+- **Microservices Architecture**: Independent services for user management, orders, products, coupons, and notifications.
+- **Feign Client**: Used for inter-service communication to enhance modularity.
+- **RabbitMQ**: Implements asynchronous messaging for reliable service communication.
+- **Redis Caching**: Manages server-side caching of shopping cart data for faster access.
+- **MySQL Database**: Relational database used for data persistence.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## **Technology Stack**
 
-## Running end-to-end tests
+- **Backend**: Spring Boot, Spring Cloud, Feign Client, RabbitMQ, Redis, MySQL
+- **Frontend**: Angular
+- **Message Broker**: RabbitMQ
+- **Cache**: Redis
+- **Database**: MySQL
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## **Getting Started**
 
-## Further help
+### **Prerequisites**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Java 17+
+- Node.js 16+
+- MySQL 8+
+- Redis
+- RabbitMQ
+
+### **Installation**
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/SE-MahmoudAbdelaal/Fawry-Gradution-Project
+   ```
+
+2. Navigate to the backend directory and install dependencies:
+
+   ```bash
+   cd backend
+   ./mvnw clean install
+   ```
+
+3. Set up the MySQL database by running the provided SQL scripts.
+
+4. Start RabbitMQ and Redis servers.
+
+5. Run each microservice using Spring Boot.
+
+6. Navigate to the frontend directory, install dependencies, and run the Angular application:
+
+   ```bash
+   cd frontend
+   npm install
+   ng serve
+   ```
+
+## **Usage**
+
+- Access the platform through the Angular frontend.
+- Users can register, log in, browse products, add items to the cart, apply coupons, and checkout.
+- Admins can manage products, orders, and view notifications.

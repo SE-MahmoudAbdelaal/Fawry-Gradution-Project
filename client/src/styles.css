@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar{
+  z-index: 44444;
+  background-color: transparent !important;
+}
+.carousel-caption{
+  bottom: 164px;
+  left: 20px;
+  margin-top: 25px;
+  transform: translate(-309px, -144px);
+
+}
+.carousel-caption h1{
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+
+  font-size: 60px;
+
+}
+.carousel-caption h3{
+margin-bottom: 20px;
+}
+.slider-btn
+{
+  padding: 15px 35px;
+  font-size: 20px;
+
+}

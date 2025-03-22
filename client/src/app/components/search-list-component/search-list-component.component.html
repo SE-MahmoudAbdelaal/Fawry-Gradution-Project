@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="">
+  <div class="row main-div justify-content-center  ">
+
+
+    @for (product of products; track product.id; let i = $index) {
+        <div class="card m-3 movie_card col-sm-12 col-md-4 ">
+
+        <app-product [data]="product"></app-product>
+    </div>
+    }@empty {
+      <p>the movie you'are looking for doesn't exist.</p>
+    }
+
+
+</div>
+</div>
+<app-footer></app-footer>

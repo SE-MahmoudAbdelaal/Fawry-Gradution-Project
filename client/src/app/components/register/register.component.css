@@ -1,0 +1,21 @@
+body{
+  background-color: #eee;
+}
+.alert p {
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+}
+button:hover {
+  color: white;
+  background-color: black;
+}
+@media all and (max-width: 576px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+/* what is missing in the component is 
+varify passwords match
+ */

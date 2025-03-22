@@ -1,0 +1,14 @@
+navbar{
+  z-index: 77777;
+  background-color: transparent;
+}
+.cart-icon span{
+  background-color: rgb(193, 183, 8);
+  color: white;
+  border-radius: 50%;
+  padding: 1px 8px;
+  position: absolute;
+  right: -18px;
+  font-size: 13px;
+  bottom: -7px;
+}

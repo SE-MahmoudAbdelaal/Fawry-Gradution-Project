@@ -1,0 +1,55 @@
+/*
+validations for the form
+
+*/
+section{
+  background-color: #f6f6fa
+}
+#rememberme,
+#rememberme-label {
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: black;
+}
+.logged{
+  min-height: 70vh;
+}
+
+@media all and (max-width: 1400px) {
+  .container-fluid,
+  .form-container {
+    width: 100%;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .main-container,
+  .form-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container-fluid {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .container-fluid,
+  .form-container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .pdiv {
+    flex-direction: column;
+  }
+}

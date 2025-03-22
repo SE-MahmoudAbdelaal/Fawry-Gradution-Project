@@ -1,0 +1,12 @@
+main {
+  background-color: #f6f6fa;
+}
+.small-column {
+  width: 10%;
+}
+.medium-column {
+  width: 20%;
+}
+.large-column {
+  width: 40%;
+}

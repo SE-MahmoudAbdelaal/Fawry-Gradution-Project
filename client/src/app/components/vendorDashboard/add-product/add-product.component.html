@@ -1,0 +1,145 @@
+<app-top-bar></app-top-bar>
+<div [ngClass]="{ 'dark-mood': this._themeservice.isDarkMood }">
+  <main class="container-fluid col-lg-6 col-md-8 col-sm-10 col-xs-12 mt-5">
+    <form [formGroup]="addProductVendor" (ngSubmit)="ngAddProduct()">
+      <div class="mb-3">
+        <label for="productName" class="form-label">Product Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="productName"
+          name="productName"
+          formControlName="product_name"
+          autocomplete="off"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="productDescription" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="productDescription"
+          name="productDescription"
+          rows="3"
+          formControlName="descreption"
+        >
+        </textarea>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select
+          class="form-select"
+          id="category"
+          name="category"
+          formControlName="category_id"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          name="price"
+          formControlName="price"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="stock" class="form-label">Stock</label>
+        <input
+          type="number"
+          class="form-control"
+          id="stock"
+          name="stock"
+          formControlName="stock"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="discount" class="form-label">Discount</label>
+        <input
+          type="number"
+          class="form-control"
+          id="discount"
+          name="discount"
+          formControlName="discount"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="onSale" class="form-label">onSale</label>
+        <select
+          class="form-select"
+          id="onSale"
+          name="onSale"
+          formControlName="is_on_sale"
+        >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex gap-3 justify-content-around">
+        <div>
+          <label for="productImage1" class="form-label">Image 1</label>
+          <input
+            type="file"
+            class="form-control"
+            id="productImage1"
+            name="productImage1"
+            accept="image/*"
+            (change)="addImageOne($event)"
+          />
+        </div>
+        <div>
+          <label for="productImage2" class="form-label">Image 2</label>
+          <input
+            type="file"
+            class="form-control"
+            id="productImage2"
+            name="productImage2"
+            accept="image/*"
+            (change)="addImageTwo($event)"
+          />
+        </div>
+      </div>
+      <div class="mb-5 d-flex gap-3 justify-content-around">
+        <div>
+          <label for="productImages" class="form-label">Image 3</label>
+          <input
+            type="file"
+            class="form-control"
+            id="productImages"
+            name="productImage3"
+            accept="image/*"
+            (change)="addImageThree($event)"
+          />
+        </div>
+        <div>
+          <label for="productImages" class="form-label">Image 4</label>
+          <input
+            type="file"
+            class="form-control"
+            id="productImages"
+            name="productImage4"
+            accept="image/*"
+            (change)="addImageFour($event)"
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Add Product</button>
+    </form>
+    <a routerLink="/vendor/dashboard/products" class="btn btn-primary my-3">
+      Back to products list</a
+    >
+  </main>
+</div>

@@ -1,0 +1,54 @@
+/* payment-form.component.css */
+
+/* Container Styles */
+.payment-form-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px; /* Adds padding inside the container */
+}
+
+/* Form Styles */
+.payment-form {
+  /* Additional form-specific styles can be added here if needed */
+}
+
+/* Label Styles */
+.payment-form-container .form-label {
+  color: #343a40;
+  /* You can add more label-specific styles here */
+}
+
+/* Input Styles */
+.payment-form-container .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  /* Optionally, add padding or font styles */
+}
+
+/* Horizontal Rule (Separator) Styles */
+.form-separator {
+  border-top: 1px solid #dee2e6;
+  margin-bottom: 1.5rem; /* Equivalent to mb-4 */
+}
+
+/* Submit Button Styles */
+.submit-button {
+  width: 100%;
+  border-radius: 5px;
+  /* You can add more button-specific styles here, such as padding or hover effects */
+}
+
+/* Error Message Styles */
+.error-message {
+  border-radius: 5px;
+  /* Optionally, customize the alert further */
+}
+/* Hover effect for the submit button */
+.submit-button:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}
+
+/* Transition for smooth hover effect */
+.submit-button {
+  transition: background-color 0.3s ease;
+}

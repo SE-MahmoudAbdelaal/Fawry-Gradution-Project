@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-3">
+    <app-merchant-sidebar></app-merchant-sidebar>
+  </div>
+  <div class="col-md-9">
+    <div>
+      <h2 class="my-5">Search Coupon</h2>
+      <form (ngSubmit)="searchCoupon()">
+        <div class="form-group w-50">
+          <label for="couponCode" class="my-4">Coupon Code:</label>
+          <input type="text" id="couponCode" [(ngModel)]="couponCode" name="couponCode" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary py-2 px-4 my-4">Search</button>
+      </form>
+
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3 w-50">
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="couponDetails" class="mt-3">
+        <h3>Coupon Details</h3>
+        <p><strong>Code:</strong> {{ couponDetails.code }}</p>
+        <p><strong>Usage Count:</strong> {{ couponDetails.usageCount }}</p>
+        <p><strong>Expiration Date:</strong> {{ couponDetails.expirationDate }}</p>
+        <p><strong>FXID:</strong> {{ couponDetails.fxid }}</p>
+        <p><strong>Percentage:</strong> {{ couponDetails.percentage }}%</p>
+
+        <button (click)="deleteCoupon()" class="btn btn-danger">Delete Coupon</button>
+      </div>
+    </div>
+  </div>
+</div>

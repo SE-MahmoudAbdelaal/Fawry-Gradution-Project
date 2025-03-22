@@ -1,0 +1,110 @@
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div
+      class="col-auto col-md-2 col-xl-1 px-sm-2 px-0 bg-dark d-flex justify-content-center pt-5"
+    >
+      <app-side-bar></app-side-bar>
+    </div>
+    @if (data) {
+    <div class="col main p-lg-4 p-md-3 p-sm-1">
+      <h2><strong>Analytics</strong> Dashboard</h2>
+      <div
+        class="col-lg-12 d-flex justify-content-around align-items-center flex-wrap p-5"
+      >
+        <div class="col-lg-4 my-5 d-flex justify-content-center">
+          <div class="card shadow" style="height: 12rem; width: 17rem">
+            <div class="card-body justify-content-between d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Plan</h5>
+                <i class="fa-solid fa-bookmark fa-xl mb-2"></i>
+              </div>
+              <div>
+                <h3 class="text-warning">{{ data.plan }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Products  -->
+        <div class="col-lg-4 my-5 d-flex justify-content-center">
+          <div class="card shadow" style="height: 12rem; width: 17rem">
+            <div class="card-body justify-content-between d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Products</h5>
+                <i class="fa-brands fa-product-hunt fa-xl mb-2"></i>
+              </div>
+              <div>
+                <h3 class="text-primary">{{ data.numberOfProducts }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 my-5 d-flex justify-content-center">
+          <div class="card shadow" style="height: 12rem; width: 17rem">
+            <div class="card-body justify-content-between d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Reviews</h5>
+                <img src="../../../assets/images/reviews.png" alt="" />
+              </div>
+              <div>
+                <h3 class="text-primary">13</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 my-5 d-flex justify-content-center">
+          <div class="card shadow" style="height: 12rem; width: 17rem">
+            <div class="card-body justify-content-between d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Account Status</h5>
+                <i class="fa-regular fa-circle-check fa-xl mb-2"></i>
+              </div>
+              <div>
+                @if ( data.accountStatus === "Suspended") {
+                <h3 class="text-danger">{{ data.accountStatus }}</h3>
+                } @if ( data.accountStatus === "Verified") {
+                <h3 class="text-success">{{ data.accountStatus }}</h3>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 my-5 d-flex justify-content-center">
+          <div class="card shadow" style="height: 12rem; width: 17rem">
+            <div class="card-body justify-content-between d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Business/Brand</h5>
+                <i class="fa-solid fa-person-chalkboard fa-xl mb-2"></i>
+              </div>
+              <div>
+                <h3 class="text-primary">{{ data.business_name }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 mb-4 d-flex justify-content-center">
+          <div class="card shadow" style="height: 12rem; width: 17rem">
+            <div class="card-body justify-content-between d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Orders</h5>
+                <i class="fa-solid fa-list-ul fa-xl mb-2"></i>
+              </div>
+              <div>
+                <h3 class="text-primary">36</h3>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!--
+        <div class="card shadow" style="height: 12rem; width: 17rem">
+          <div class="card-body justify-content-between d-flex flex-column">
+            <h5 class="card-title">Orders</h5>
+            <h3 class="text-primary">33</h3>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-md-3">
+
+    <app-merchant-sidebar></app-merchant-sidebar>
+  </div>
+  <div class="col-md-9 ">
+
+  <h2 class="text-center m-3" > Your Coupons</h2>
+  <button class="btn btn-primary py-3 px-4  rounded-3" (click)="createNewCoupon()">Create New Coupon </button>
+
+<!-- <app-create-coupon-model></app-create-coupon-model> -->
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Code</th>
+        <th>Usage Count</th>
+        <th>Expire Date</th>
+        <th>Fxid Value</th>
+        <th> Percentage Value</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coupon of coupons">
+        <td>{{ coupon.code }}</td>
+        <td>{{ coupon.usageCount }}</td>
+        <td>{{ coupon.expireDate }}</td>
+        <td>{{ coupon.fxidValue }}</td>
+        <td>{{ coupon.percentageValue }}</td>
+        <td>
+          <button class="btn btn-danger me-2">Delete</button>
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCardModal">
+            Edit
+
+            </button>
+
+
+
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+ 
+
+<!-- The Modal -->
+<div class="modal fade" id="addCardModal" tabindex="-1" aria-labelledby="addCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="addCardModalLabel">        Edit Coupon </h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="couponCode" class="form-label">coupon Code </label>
+            <input type="text" class="form-control" id="couponCode" [(ngModel)]="selectedCoupon.code" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="couponUsageCount" class="form-label">coupon UsageCount</label>
+            <input type="number" class="form-control" id="couponUsageCount" [(ngModel)]="selectedCoupon.usageCount" name="price" required>
+          </div>
+          <div class="mb-3">
+            <label for="couponExpireDate" class="form-label">coupon ExpireDate</label>
+            <textarea class="form-control" id="couponExpireDate" [(ngModel)]="selectedCoupon.expireDate" name="description" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="coupon FxidValue" class="form-label">coupon FxidValue</label>
+            <input type="number" class="form-control" id="couponFxidValue" [(ngModel)]="selectedCoupon.fxidValue" name="stockQuantity" required>
+          </div>
+          <div class="mb-3">
+            <label for="couponPercentageValue" class="form-label">coupon PercentageValue</label>
+            <input type="number" class="form-control" id="couponPercentageValue" [(ngModel)]="selectedCoupon.percentageValue" name="stockQuantity" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>

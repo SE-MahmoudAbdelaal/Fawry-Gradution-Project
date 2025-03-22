@@ -1,0 +1,57 @@
+<main>
+  <div
+    class="d-flex flex-column align-items-start px-3 pt-2 text-white largediv"
+  >
+    <a
+      class="d-flex align-items-start pb-3 mb-md-0 me-md-auto text-decoration-none"
+      routerLink="/vendor/dashboard"
+    >
+      <span class="fs-5 d-none d-sm-inline text-warning">Dashboard</span>
+    </a>
+    <ul
+      class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start w-100"
+      id="dashboard"
+    >
+      <li>
+        <a routerLink="/vendor/dashboard/products" class="nav-link px-0">
+          <span class="ms-1 d-none d-sm-inline" routerLinkActive="active"
+            >Products</span
+          >
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/vendor/dashboard/ratings"
+          class="nav-link px-0 align-middle"
+        >
+          <span class="ms-1 d-none d-sm-inline" routerLinkActive="active"
+            >Ratings</span
+          >
+        </a>
+      </li>
+      <li>
+        <a routerLink="/vendor/dashboard/accountsettings" class="nav-link px-0">
+          <span class="ms-1 d-none d-sm-inline" routerLinkActive="active"
+            >Account Settings</span
+          >
+        </a>
+      </li>
+      <li>
+        <a routerLink="" class="nav-link px-0">
+          <span class="ms-1 d-none d-sm-inline">Back to Home</span>
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <div>
+      <!-- add click function to lose the token and redirect to vendor login like the logout in the header  -->
+      <a
+        routerLink="/vendor/login"
+        class="text-decoration-none"
+       
+        >Logout</a
+      >
+    </div>
+  </div>
+  <footer>this is footer</footer>
+</main>

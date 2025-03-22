@@ -1,0 +1,82 @@
+<!-- <p>register works!</p> -->
+<div class="row">
+  <div class="col-md-3">
+
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+<div class="register ">
+
+  <form class="w-50 m-5 p-5 my-5 rounded-4  border border-info rounded" [formGroup]="adminForm" (ngSubmit)="submitadminForm()">
+    <p class="form-title text-center fw-bold fs-3">Create Admin </p>
+
+    <div class="mb-3">
+      <label for="firstName" class="form-label fs-5 ">First Name :</label>
+      <input type="text" formControlName="firstName" class="form-control" id="firstName"  >
+      <div class="alert alert-danger my-1 p-0" *ngIf="adminForm.get('firstName')?.errors && adminForm.get('firstName')?.touched">
+        <p  *ngIf="adminForm.get('firstName')?.getError('required')">Name is required</p>
+        <p  *ngIf="adminForm.get('firstName')?.getError('minlength')">minlenght of name is 3 </p>
+        <p  *ngIf="adminForm.get('firstName')?.getError('maxlength')">maxlenght of name is 30 </p>
+      </div>
+
+
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label fs-5 ">Last Name :</label>
+      <input type="text" formControlName="lastName" class="form-control" id="lastName"  >
+      <div class="alert alert-danger my-1 p-0" *ngIf="adminForm.get('lastName')?.errors && adminForm.get('lastName')?.touched">
+        <p  *ngIf="adminForm.get('lastName')?.getError('required')">Name is required</p>
+        <p  *ngIf="adminForm.get('lastName')?.getError('minlength')">minlenght of name is 3 </p>
+        <p  *ngIf="adminForm.get('lastName')?.getError('maxlength')">maxlenght of name is 30 </p>
+      </div>
+      </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label fs-5 ">Email address</label>
+          <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" aria-describedby="emailHelp">
+          <div class="alert alert-danger my-1 p-0" *ngIf="adminForm.get('email')?.errors && adminForm.get('email')?.touched">
+            <p  *ngIf="adminForm.get('email')?.getError('required')">email is required</p>
+            <p  *ngIf="adminForm.get('email')?.getError('email')">email is invalid </p>
+
+          </div>
+        </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label fs-5">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <div class="alert alert-danger my-1 p-0" *ngIf="adminForm.get('password')?.errors && adminForm.get('password')?.touched">
+        <p  *ngIf="adminForm.get('password')?.getError('required')">password is required</p>
+        <p  *ngIf="adminForm.get('password')?.getError('pattern')"> password must start with uppercase </p>
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="phone" class="form-label fs-5">phone</label>
+      <input type="text" formControlName="phone" class="form-control" id="phone">
+      <div class="alert alert-danger my-1 p-0" *ngIf="adminForm.get('phone')?.errors && adminForm.get('phone')?.touched">
+        <p  *ngIf="adminForm.get('phone')?.getError('required')">phone is required</p>
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label fs-5">Gender</label>
+      <div>
+        <label class="form-check-label">
+          <input type="radio" formControlName="gender" value="MALE" class="form-check-input">
+          Male
+        </label>
+        <label class="form-check-label ms-3">
+          <input type="radio" formControlName="gender" value="FEMALE" class="form-check-input">
+          Female
+        </label>
+      </div>
+      <div class="alert alert-danger my-1 p-0" *ngIf="adminForm.get('gender')?.errors && adminForm.get('gender')?.touched">
+        <p *ngIf="adminForm.get('gender')?.hasError('required')">Gender is required</p>
+      </div>
+    </div>
+    <button  [disabled]="adminForm.invalid" type="submit"  class="btn btn-primary w-100 fs-5"> Add Admin</button>
+
+  </form>
+
+</div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+
+.final-div{
+  display: flex;
+  justify-content: space-evenly;
+}
+.final-div ,.ship ,.payment,.footer-end{
+  display: flex;
+}
+.final-div p{
+  margin: 0 10px;
+}

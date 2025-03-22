@@ -1,0 +1,30 @@
+<!-- <app-sidebar></app-sidebar> -->
+<div class="  col-md-9 py-3">
+  <h2 class="text-center m-3">All Merchants</h2>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Business Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let merchant of merchants">
+        <td>{{ merchant.fname }}</td>
+        <td>{{ merchant.lname }}</td>
+        <td>{{ merchant.business_name }}</td>
+        <td>{{ merchant.email }}</td>
+        <td>{{ merchant.phone_number }}</td>
+        <td>
+          <button class="btn btn-danger me-2" (click)="deletMerchant(merchant.id)" >Delete</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

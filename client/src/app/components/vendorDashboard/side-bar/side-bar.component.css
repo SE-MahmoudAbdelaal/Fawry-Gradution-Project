@@ -1,0 +1,10 @@
+.active {
+  color: white;
+}
+main {
+  flex: 0 0 auto;
+  min-height: 90vh;
+}
+.largediv {
+  flex: 1;
+}
